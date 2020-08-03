@@ -1,19 +1,20 @@
-let calculator = {
-    a: null,
-    b: null,
+function Calculator() {
+    this.a = null;
+    this.b = null;
     
-    read() {
+    this.read = function() {
         this.a = Number(prompt('Введите первое число'));
         this.b = Number(prompt('Введите второе число'));
-    },
-    sum() {
+    };
+    this.sum = function() {
         return this.a + this.b;
-    },
-    mul() {
+    };
+    this.mul = function() {
         return this.a * this.b;
-    },
+    };
 };
 
+let calculator = new Calculator();
 calculator.read();
 alert( calculator.sum() );
 alert( calculator.mul() );
