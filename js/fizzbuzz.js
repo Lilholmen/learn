@@ -1,4 +1,4 @@
-function fizzbuzz(n) {
+const fizzbuzz = n => {
     let f = 'fizz';
     let b = 'buzz';
 
@@ -9,4 +9,4 @@ function fizzbuzz(n) {
     }
 }
 
-fizzbuzz(+prompt('Укажите интевал', 3));
+fizzbuzz( +prompt('Укажите интевал', 3) );
