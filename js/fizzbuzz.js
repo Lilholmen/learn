@@ -4,8 +4,8 @@ const fizzbuzz = n => {
 
     for(let i = 1; i <= n; i++) {
         console.log((i % 3 === 0 && i % 5 === 0) ? f + b : 
-        (i % 5 === 0) ? b :
-        (i % 3 === 0) ? f : i);
+        (i % 3 === 0) ? f :
+        (i % 5 === 0) ? b : i);
     }
 }
 
