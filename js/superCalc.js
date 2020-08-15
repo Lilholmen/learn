@@ -12,7 +12,7 @@ function Calculator(str) {
         let b = +argsArr[2];
         let doThat = argsArr[1];
 
-        if(isNaN    (a) || isNaN(b) || !this.methods[doThat]){
+        if(isNaN(a) || isNaN(b) || !this.methods[doThat]) {
             return 'Input Error';
         }
 
