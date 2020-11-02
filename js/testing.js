@@ -1,20 +1,22 @@
 "use strict";
-function topSalary(obj) {
-    let topSal = [null, 0];
+let room = {
+    number: 23
+};
 
-    for(let [name, salary] of Object.entries(obj)) {
-        if(salary > topSal[1]) {
-            topSal = [name, salary];
+let meetup = {
+    title: "Совещание",
+    occupiedBy: [{name: "Иванов"}, {name: "Петров"}],
+    place: room
+};
+
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+alert( JSON.stringify(meetup, function replacer(key, value) {
+    if(key != "") {
+        if(value == meetup) {
+            return undefined;
         }
     }
-    
-    return topSal[0];
-}
-
-let salaries = {
-    "John": 100,
-    "Pete": 300,
-    "Mary": 250
-  };
-
-alert( topSalary(salaries) );
+    return value;
+}));
